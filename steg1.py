@@ -3,18 +3,33 @@ from binary_decoder import letterToDecimal
 from binary_decoder import bynarriToDecimal
 
 
-print('do you wnat to encode or decode?')
+print('do you want to encode or decode?')
+print('write "encode" if you want to encode or "decode" if you want to decode')
 enDe = input()
 
 if enDe == 'encode':
 
+	#print('do you want to create a new image or write into an existing image?')
+	#print('write "create" to create a new image or "write" to write into existing image')
+	#ans = input()
+
+	#if ans=='create' or ans=='Create':
+	#	print('what will the image file be caled?')
+	#	imageName = input()
+	#	image = Image.new('RGB', (160,160), color='black')
+	#	imageName = imageName + '.png'
+	#	image.save(imageName)
+
+	#else:
+	#	print('what is the existing image name?')
+	#	imageName = input()
+	#	image = Image.open(imageName)
 
 	print('what will the image file be caled?')
 	imageName = input()
-	image = Image.new('RGB', (160,160), color='white')
+	image = Image.new('RGB', (160,160), color='black')
 	imageName = imageName + '.png'
 	image.save(imageName)
-
 
 	print('what will you like to write')
 	output = ''
@@ -53,9 +68,8 @@ if enDe == 'encode':
 #-----------------------------------------------------------------
 
 if enDe == 'decode':
-	print('what image will you like to decode? (dont add the image suffix)')
+	print('what image will you like to decode?')
 	deImage = input()
-	deImage = deImage+'.png'
 	img = Image.open(deImage)
 	pixel = img.load()
 	n, n2, n3 = pixel[0,0]
