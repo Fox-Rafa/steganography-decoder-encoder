@@ -1,4 +1,4 @@
-# Tteganography-decoder-encoder
+# Steganography-decoder-encoder
 
 This is my take on encoding/decoding data into images woth steganography. It encodes data into an image by changing the values of the top left pixels in a pattern that can be decoded later.
 
